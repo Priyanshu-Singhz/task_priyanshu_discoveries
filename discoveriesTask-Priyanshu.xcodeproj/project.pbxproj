@@ -13,6 +13,13 @@
 		BDEE92B82B9B0BF10048271C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDEE92B62B9B0BF10048271C /* Main.storyboard */; };
 		BDEE92BA2B9B0BF20048271C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDEE92B92B9B0BF20048271C /* Assets.xcassets */; };
 		BDEE92BD2B9B0BF20048271C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDEE92BB2B9B0BF20048271C /* LaunchScreen.storyboard */; };
+		BDEE92C72B9B0DD00048271C /* Londrina_Solid in Resources */ = {isa = PBXBuildFile; fileRef = BDEE92C62B9B0DD00048271C /* Londrina_Solid */; };
+		BDEE92C92B9B0EB90048271C /* metropolis in Resources */ = {isa = PBXBuildFile; fileRef = BDEE92C82B9B0EB90048271C /* metropolis */; };
+		BDEE92D12B9B1DD40048271C /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE92CF2B9B1DD40048271C /* CustomCellTableViewCell.swift */; };
+		BDEE92D22B9B1DD40048271C /* CustomCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDEE92D02B9B1DD40048271C /* CustomCellTableViewCell.xib */; };
+		BDEE92D62B9B25690048271C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE92D52B9B25690048271C /* Model.swift */; };
+		BDEE92D82B9B26080048271C /* dummyData.json in Resources */ = {isa = PBXBuildFile; fileRef = BDEE92D72B9B26080048271C /* dummyData.json */; };
+		BDEE92DC2B9B42950048271C /* MiniPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDEE92DB2B9B42950048271C /* MiniPlayerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		BDEE92B92B9B0BF20048271C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDEE92BC2B9B0BF20048271C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDEE92BE2B9B0BF20048271C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDEE92C62B9B0DD00048271C /* Londrina_Solid */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Londrina_Solid; sourceTree = "<group>"; };
+		BDEE92C82B9B0EB90048271C /* metropolis */ = {isa = PBXFileReference; lastKnownFileType = folder; path = metropolis; sourceTree = "<group>"; };
+		BDEE92CF2B9B1DD40048271C /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
+		BDEE92D02B9B1DD40048271C /* CustomCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCellTableViewCell.xib; sourceTree = "<group>"; };
+		BDEE92D52B9B25690048271C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		BDEE92D72B9B26080048271C /* dummyData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dummyData.json; sourceTree = "<group>"; };
+		BDEE92DB2B9B42950048271C /* MiniPlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiniPlayerView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,9 @@
 		BDEE92AF2B9B0BF10048271C /* discoveriesTask-Priyanshu */ = {
 			isa = PBXGroup;
 			children = (
+				BDEE92D32B9B25500048271C /* Models */,
+				BDEE92CA2B9B1D7F0048271C /* Custom Cell */,
+				BDEE92C42B9B0DB40048271C /* Resources */,
 				BDEE92B02B9B0BF10048271C /* AppDelegate.swift */,
 				BDEE92B22B9B0BF10048271C /* SceneDelegate.swift */,
 				BDEE92B42B9B0BF10048271C /* ViewController.swift */,
@@ -65,6 +82,42 @@
 				BDEE92BE2B9B0BF20048271C /* Info.plist */,
 			);
 			path = "discoveriesTask-Priyanshu";
+			sourceTree = "<group>";
+		};
+		BDEE92C42B9B0DB40048271C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BDEE92C52B9B0DC00048271C /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BDEE92C52B9B0DC00048271C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BDEE92C82B9B0EB90048271C /* metropolis */,
+				BDEE92C62B9B0DD00048271C /* Londrina_Solid */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BDEE92CA2B9B1D7F0048271C /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BDEE92CF2B9B1DD40048271C /* CustomCellTableViewCell.swift */,
+				BDEE92D02B9B1DD40048271C /* CustomCellTableViewCell.xib */,
+				BDEE92DB2B9B42950048271C /* MiniPlayerView.xib */,
+			);
+			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		BDEE92D32B9B25500048271C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BDEE92D52B9B25690048271C /* Model.swift */,
+				BDEE92D72B9B26080048271C /* dummyData.json */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +178,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDEE92DC2B9B42950048271C /* MiniPlayerView.xib in Resources */,
+				BDEE92D22B9B1DD40048271C /* CustomCellTableViewCell.xib in Resources */,
+				BDEE92C92B9B0EB90048271C /* metropolis in Resources */,
 				BDEE92BD2B9B0BF20048271C /* LaunchScreen.storyboard in Resources */,
 				BDEE92BA2B9B0BF20048271C /* Assets.xcassets in Resources */,
 				BDEE92B82B9B0BF10048271C /* Main.storyboard in Resources */,
+				BDEE92C72B9B0DD00048271C /* Londrina_Solid in Resources */,
+				BDEE92D82B9B26080048271C /* dummyData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +196,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDEE92D62B9B25690048271C /* Model.swift in Sources */,
 				BDEE92B52B9B0BF10048271C /* ViewController.swift in Sources */,
 				BDEE92B12B9B0BF10048271C /* AppDelegate.swift in Sources */,
+				BDEE92D12B9B1DD40048271C /* CustomCellTableViewCell.swift in Sources */,
 				BDEE92B32B9B0BF10048271C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
