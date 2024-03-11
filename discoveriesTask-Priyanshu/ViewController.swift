@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource , UITableViewDelegate{
 
     @IBOutlet weak var tablView: UITableView!
     @IBOutlet weak var musicNumberStackView: UIStackView!
@@ -34,6 +34,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         miniPlayer.isHidden = true
         navigationController?.navigationBar.backgroundColor = .blue
         tablView.dataSource = self
+                tablView.delegate = self
         let backgroundImage = UIImage(named: "BackgroundImage")
         view.backgroundColor = UIColor(patternImage: backgroundImage!)
         mainView.backgroundColor = .clear
@@ -76,7 +77,7 @@ class ViewController: UIViewController, UITableViewDataSource {
                     print("JSON file not found.")
                 }
         
-        print(items)
+      
        
         
         
@@ -87,34 +88,55 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         // MARK: - UITableViewDataSource
         
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
-    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+            return items.count
+        }
 
-        
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return items[section].items.count
+        }
+
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomCellTableViewCell
-            let item = items[indexPath.row]
+            let item = items[indexPath.section].items[indexPath.row]
             cell.titleLabel.text = item.title
             cell.typeLabel.text = item.type
-            cell.locationLabel.text = item.location // Set location
-        
-        // Handle accessory button tap
-        cell.accessoryButtonTapHandler = {
-            guard let indexPath = tableView.indexPath(for: cell) else { return }
-            let item = self.items[indexPath.row]
-            self.miniPlayerTitle.text = item.title
-            self.miniPlayerType.text = item.type
-//            self.miniPlayerImage.image = UIImage(named: item.imageName) // Assuming imageName is the property containing the image name
-            self.miniPlayer.isHidden = false
-        }
-        
+            cell.locationLabel.text = item.location
+            cell.accessoryButton.setImage(UIImage(named: item.imageName), for: .normal)
+            
+            // Handle accessory button tap
+            cell.accessoryButtonTapHandler = {
+                self.miniPlayerTitle.text = item.title
+                self.miniPlayerType.text = item.type
+                self.miniPlayerImage.image = UIImage(named: item.imageName)
+                self.miniPlayer.isHidden = false
+            }
+            
             return cell
         }
 
 
 
-    
+    // MARK: - UITableViewDelegate
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 40))
+        
+        let titleLabel = UILabel(frame: CGRect(x: 16, y: 10, width: tableView.frame.width - 32, height: 20))
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
+        titleLabel.textColor = .black
+        titleLabel.text = items[section].date
+        headerView.addSubview(titleLabel)
+        
+        return headerView
+    }
+
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 40 // Adjust the height as needed
+//    }
+//    
+
+
 
 
 }

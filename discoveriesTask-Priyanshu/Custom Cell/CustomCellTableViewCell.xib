@@ -32,7 +32,7 @@
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0N-lA-lNK">
                                 <rect key="frame" x="0.0" y="0.0" width="79" height="174"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Picture"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
                                     <action selector="accessoryButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="G9z-9i-2Rx"/>
                                 </connections>
@@ -162,7 +162,6 @@
     </objects>
     <resources>
         <image name="Hexagon" width="118" height="73"/>
-        <image name="Picture" width="101" height="96"/>
         <image name="RouteIcon" width="12" height="12.333333015441895"/>
         <namedColor name="Appcolor">
             <color red="0.42352941176470588" green="0.76078431372549016" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
