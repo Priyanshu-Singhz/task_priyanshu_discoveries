@@ -122,20 +122,19 @@ class ViewController: UIViewController, UITableViewDataSource , UITableViewDeleg
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 40))
         
-        let titleLabel = UILabel(frame: CGRect(x: 16, y: 10, width: tableView.frame.width - 32, height: 20))
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
-        titleLabel.textColor = .black
-        titleLabel.text = items[section].date
-        headerView.addSubview(titleLabel)
+        
+            let titleLabel = UILabel(frame: CGRect(x: 16, y: 10, width: tableView.frame.width, height: 20))
+            titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
+            titleLabel.textColor = .buttonColorGrey
+            titleLabel.text = items[section].date
+            headerView.addSubview(titleLabel)
+        
         
         return headerView
     }
 
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 40 // Adjust the height as needed
-//    }
-//    
 
+ 
 
 
 
