@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Title 1",
+    "type": "type 1",
+    "location": "A 1",
+    "imageName": "Picture"
+  },
+  {
+    "title": "Title 2",
+    "type": "type 2",
+    "location": "A 2",
+    "imageName": "Picture"
+  },
+  {
+    "title": "Title 3",
+    "type": "type 3",
+    "location": "A 3",
+    "imageName": "Picture"
+  },
+  
+]

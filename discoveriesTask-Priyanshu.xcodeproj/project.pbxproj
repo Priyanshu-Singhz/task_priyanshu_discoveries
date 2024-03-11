@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDCCF92D2B9ED4E1001EFB84 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = BDCCF92C2B9ED4E1001EFB84 /* data.json */; };
 		BDEE92B12B9B0BF10048271C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE92B02B9B0BF10048271C /* AppDelegate.swift */; };
 		BDEE92B32B9B0BF10048271C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE92B22B9B0BF10048271C /* SceneDelegate.swift */; };
 		BDEE92B52B9B0BF10048271C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE92B42B9B0BF10048271C /* ViewController.swift */; };
@@ -18,11 +19,10 @@
 		BDEE92D12B9B1DD40048271C /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE92CF2B9B1DD40048271C /* CustomCellTableViewCell.swift */; };
 		BDEE92D22B9B1DD40048271C /* CustomCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDEE92D02B9B1DD40048271C /* CustomCellTableViewCell.xib */; };
 		BDEE92D62B9B25690048271C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE92D52B9B25690048271C /* Model.swift */; };
-		BDEE92D82B9B26080048271C /* dummyData.json in Resources */ = {isa = PBXBuildFile; fileRef = BDEE92D72B9B26080048271C /* dummyData.json */; };
-		BDEE92DC2B9B42950048271C /* MiniPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDEE92DB2B9B42950048271C /* MiniPlayerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BDCCF92C2B9ED4E1001EFB84 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		BDEE92AD2B9B0BF10048271C /* discoveriesTask-Priyanshu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "discoveriesTask-Priyanshu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDEE92B02B9B0BF10048271C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDEE92B22B9B0BF10048271C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,8 +36,6 @@
 		BDEE92CF2B9B1DD40048271C /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
 		BDEE92D02B9B1DD40048271C /* CustomCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCellTableViewCell.xib; sourceTree = "<group>"; };
 		BDEE92D52B9B25690048271C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		BDEE92D72B9B26080048271C /* dummyData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dummyData.json; sourceTree = "<group>"; };
-		BDEE92DB2B9B42950048271C /* MiniPlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiniPlayerView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +104,6 @@
 			children = (
 				BDEE92CF2B9B1DD40048271C /* CustomCellTableViewCell.swift */,
 				BDEE92D02B9B1DD40048271C /* CustomCellTableViewCell.xib */,
-				BDEE92DB2B9B42950048271C /* MiniPlayerView.xib */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";
@@ -115,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				BDEE92D52B9B25690048271C /* Model.swift */,
-				BDEE92D72B9B26080048271C /* dummyData.json */,
+				BDCCF92C2B9ED4E1001EFB84 /* data.json */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -178,14 +175,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDEE92DC2B9B42950048271C /* MiniPlayerView.xib in Resources */,
 				BDEE92D22B9B1DD40048271C /* CustomCellTableViewCell.xib in Resources */,
 				BDEE92C92B9B0EB90048271C /* metropolis in Resources */,
 				BDEE92BD2B9B0BF20048271C /* LaunchScreen.storyboard in Resources */,
+				BDCCF92D2B9ED4E1001EFB84 /* data.json in Resources */,
 				BDEE92BA2B9B0BF20048271C /* Assets.xcassets in Resources */,
 				BDEE92B82B9B0BF10048271C /* Main.storyboard in Resources */,
 				BDEE92C72B9B0DD00048271C /* Londrina_Solid in Resources */,
-				BDEE92D82B9B26080048271C /* dummyData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

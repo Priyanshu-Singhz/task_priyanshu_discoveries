@@ -9,17 +9,19 @@ import UIKit
 
 class CustomCellTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var accessoryButton: UIButton!
     
+    @IBOutlet weak var locationLabel: UILabel!
     
     @IBOutlet weak var routeButtonStack: UIStackView!
     @IBOutlet weak var mainStackView: UIStackView!
     
-    // Connect this action to the Touch Up Inside event of the accessoryButton.
-    @IBAction func accessoryButtonTapped(_ sender: Any) {
-        print("Accessory button tapped!")
-    }
+    var accessoryButtonTapHandler: (() -> Void)?
+        
+        @IBAction func accessoryButtonTapped(_ sender: Any) {
+            accessoryButtonTapHandler?()
+        }
     override func layoutSubviews() {
             super.layoutSubviews()
         mainStackView.layer.cornerRadius = 10

@@ -1,8 +1,6 @@
-struct Item : Codable{
+struct Item: Codable {
     let title: String
-    let subtitle: String
-    let imageURL: String // Assuming imageURL is a string representing the URL of the image
+    let type: String
+    let location: String 
+    let imageName: String
 }
-
-//var items: [Item] = []
-

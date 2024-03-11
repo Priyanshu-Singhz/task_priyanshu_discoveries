@@ -14,9 +14,24 @@ class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var navigationView: UIView!
     @IBOutlet weak var mainView: UIView!
     
+    @IBOutlet weak var miniPlayerImage: UIImageView!
+    @IBOutlet weak var miniPlayerTitle: UILabel!
+    
+    @IBOutlet weak var miniPlayerType: UILabel!
+    @IBAction func miniPlayerPauseButtonTapped(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func miniPlayerCancelButtonTapped(_ sender: UIButton) {
+        miniPlayer.isHidden = true
+    }
+    
+    var items: [Item] = []
 
+    @IBOutlet weak var miniPlayer: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        miniPlayer.isHidden = true
         navigationController?.navigationBar.backgroundColor = .blue
         tablView.dataSource = self
         let backgroundImage = UIImage(named: "BackgroundImage")
@@ -36,7 +51,33 @@ class ViewController: UIViewController, UITableViewDataSource {
         tablView.register(UINib(nibName: "CustomCellTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
        
                 
-    
+        // Set up constraints for miniPlayer
+        miniPlayer.translatesAutoresizingMaskIntoConstraints = false
+        let bottomConstraint = miniPlayer.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0)
+        let leadingConstraint = miniPlayer.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0)
+        let trailingConstraint = miniPlayer.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0)
+        let heightConstraint = miniPlayer.heightAnchor.constraint(equalToConstant: 60) // Adjust this value to set the desired height for your miniplayer view
+        
+        NSLayoutConstraint.activate([bottomConstraint, leadingConstraint, trailingConstraint, heightConstraint])
+        
+        
+        
+        // Load and parse JSON data
+        if let path = Bundle.main.path(forResource: "data", ofType: "json") {
+                    do {
+                        let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                        let decoder = JSONDecoder()
+                        items = try decoder.decode([Item].self, from: data)
+                        tablView.reloadData()
+                    } catch {
+                        print("Error reading or parsing JSON:", error)
+                    }
+                } else {
+                    print("JSON file not found.")
+                }
+        
+        print(items)
+       
         
         
     }
@@ -46,14 +87,31 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         // MARK: - UITableViewDataSource
         
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return 5
-        }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
+
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomCellTableViewCell
-        return cell
-    }
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomCellTableViewCell
+            let item = items[indexPath.row]
+            cell.titleLabel.text = item.title
+            cell.typeLabel.text = item.type
+            cell.locationLabel.text = item.location // Set location
+        
+        // Handle accessory button tap
+        cell.accessoryButtonTapHandler = {
+            guard let indexPath = tableView.indexPath(for: cell) else { return }
+            let item = self.items[indexPath.row]
+            self.miniPlayerTitle.text = item.title
+            self.miniPlayerType.text = item.type
+//            self.miniPlayerImage.image = UIImage(named: item.imageName) // Assuming imageName is the property containing the image name
+            self.miniPlayer.isHidden = false
+        }
+        
+            return cell
+        }
+
 
 
     
