@@ -43,22 +43,28 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vO2-fp-C9Y">
                                         <rect key="frame" x="0.0" y="0.0" width="710" height="77"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edith Bogan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1R-PL-Rgb">
-                                                <rect key="frame" x="8" y="0.0" width="90" height="15"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edith Bogan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1R-PL-Rgb">
+                                                <rect key="frame" x="0.0" y="5" width="710" height="15"/>
                                                 <fontDescription key="fontDescription" name="Metropolis-SemiBold" family="Metropolis" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Restuarent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01t-Fw-KdW">
-                                                <rect key="frame" x="8" y="24" width="58" height="11"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restuarent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01t-Fw-KdW">
+                                                <rect key="frame" x="0.0" y="30" width="710" height="11"/>
                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="11"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="01t-Fw-KdW" secondAttribute="trailing" id="DTa-Vw-kox"/>
+                                            <constraint firstItem="01t-Fw-KdW" firstAttribute="leading" secondItem="vO2-fp-C9Y" secondAttribute="leading" id="FnC-X1-mYq"/>
+                                            <constraint firstItem="K1R-PL-Rgb" firstAttribute="top" secondItem="vO2-fp-C9Y" secondAttribute="top" constant="5" id="Sav-Pf-82h"/>
+                                            <constraint firstItem="K1R-PL-Rgb" firstAttribute="leading" secondItem="vO2-fp-C9Y" secondAttribute="leading" id="Tnd-Lc-bxE"/>
+                                            <constraint firstItem="01t-Fw-KdW" firstAttribute="top" secondItem="K1R-PL-Rgb" secondAttribute="bottom" constant="10" id="Ufc-i9-sok"/>
+                                            <constraint firstAttribute="trailing" secondItem="K1R-PL-Rgb" secondAttribute="trailing" id="gb3-P7-upj"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCd-y0-wrI">
                                         <rect key="frame" x="0.0" y="77" width="710" height="77"/>
@@ -157,7 +163,7 @@
                 <outlet property="titleLabel" destination="K1R-PL-Rgb" id="Z4b-tx-eAx"/>
                 <outlet property="typeLabel" destination="01t-Fw-KdW" id="e7x-Ao-hwz"/>
             </connections>
-            <point key="canvasLocation" x="1544" y="96"/>
+            <point key="canvasLocation" x="1542.7480916030534" y="95.774647887323951"/>
         </tableViewCell>
     </objects>
     <resources>
