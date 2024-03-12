@@ -99,11 +99,11 @@
                                                         <rect key="frame" x="350" y="0.0" width="350" height="40"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="RouteIcon" translatesAutoresizingMaskIntoConstraints="NO" id="mgE-qk-Pb1">
-                                                                <rect key="frame" x="5" y="10" width="285.33333333333331" height="20"/>
+                                                                <rect key="frame" x="5" y="10" width="287.33333333333331" height="20"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUI-Kr-MEB">
-                                                                <rect key="frame" x="295.33333333333337" y="10" width="44.666666666666686" height="20"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <rect key="frame" x="297.33333333333337" y="10" width="42.666666666666686" height="20"/>
+                                                                <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="15"/>
                                                                 <color key="textColor" name="CustomCell"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
