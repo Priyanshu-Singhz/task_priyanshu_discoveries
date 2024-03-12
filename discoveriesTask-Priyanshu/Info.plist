@@ -25,5 +25,7 @@
 	<string></string>
 	<key>fonts</key>
 	<string></string>
+	<key>assets</key>
+	<string></string>
 </dict>
 </plist>
