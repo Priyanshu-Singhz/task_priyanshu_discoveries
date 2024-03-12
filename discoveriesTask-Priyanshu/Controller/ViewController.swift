@@ -2,7 +2,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-   
     @IBOutlet weak var tablView: UITableView!
     @IBOutlet weak var musicNumberStackView: UIStackView!
     @IBOutlet weak var navigationView: UIView!
@@ -11,8 +10,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var miniPlayerTitle: UILabel!
     @IBOutlet weak var miniPlayerType: UILabel!
     @IBOutlet weak var miniPlayer: UIView!
-    
-    
     @IBAction func miniPlayerCancelButtonTapped(_ sender: UIButton) {
         miniPlayer.isHidden = true
     }
@@ -22,27 +19,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //yeh miniplayer hidden h ya nhi uske liye
         miniPlayer.isHidden = true
-        navigationController?.navigationBar.backgroundColor = .blue
+
         
         let backgroundImage = UIImage(named: "BackgroundImage")
         view.backgroundColor = UIColor(patternImage: backgroundImage!)
-        mainView.backgroundColor = .clear
         navigationView.layer.cornerRadius = 20
-        navigationView.clipsToBounds = true
-        
         musicNumberStackView.layer.cornerRadius = 23
-        musicNumberStackView.clipsToBounds = true
-        musicNumberStackView.layoutMargins = UIEdgeInsets(top: 10, left: 16, bottom: 10, right: 16)
-        musicNumberStackView.isLayoutMarginsRelativeArrangement = true
         
         miniPlayer.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            miniPlayer.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0),
+            miniPlayer.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0), // Align to bottom without safe area
             miniPlayer.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             miniPlayer.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-            miniPlayer.heightAnchor.constraint(equalToConstant: 60)
+            miniPlayer.heightAnchor.constraint(equalToConstant: 90) // Double the height
         ])
+
         
         tablView.register(UINib(nibName: "CustomCellTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
         tablView.dataSource = self
@@ -50,6 +43,23 @@ class ViewController: UIViewController {
         
         loadItems()
     }
+    
+    //yeh parse karane ke liye json ko item ke andar
+    func loadItems() {
+        guard let url = Bundle.main.url(forResource: "data", withExtension: "json") else {
+            print("Error: JSON file not found")
+            return
+        }
+        
+        do {
+            let data = try Data(contentsOf: url)
+            items = try JSONDecoder().decode([Item].self, from: data)
+            tablView.reloadData()
+        } catch {
+            print("Error decoding JSON:", error)
+        }
+    }
+
 }
 
 
@@ -65,11 +75,14 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomCellTableViewCell
         let item = items[indexPath.section].items[indexPath.row]
+        
+        //cell ke labels yahi se set kardiye
         cell.titleLabel.text = item.title
         cell.typeLabel.text = item.type
         cell.locationLabel.text = item.location
         cell.accessoryButton.setImage(UIImage(named: item.imageName), for: .normal)
         
+        //cell me jo play button he uske tap se miniplayer configure ho jayega and visible ho jayega
         cell.accessoryButtonTapHandler = {
             self.miniPlayerTitle.text = item.title
             self.miniPlayerType.text = item.type
@@ -81,11 +94,11 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-
+//yeh par sections ke liye
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 40))
-        let titleLabel = UILabel(frame: CGRect(x: 16, y: 10, width: tableView.frame.width, height: 20))
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 30))
+        let titleLabel = UILabel(frame: CGRect(x: 16, y: 10, width: tableView.frame.width, height: 15))
         titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
         titleLabel.textColor = .buttonColorGrey
         titleLabel.text = items[section].date
@@ -95,20 +108,3 @@ extension ViewController: UITableViewDelegate {
 }
 
 
-private extension ViewController {
-    func loadItems() {
-        guard let path = Bundle.main.path(forResource: "data", ofType: "json") else {
-            print("JSON file not found.")
-            return
-        }
-        
-        do {
-            let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-            let decoder = JSONDecoder()
-            items = try decoder.decode([Item].self, from: data)
-            tablView.reloadData()
-        } catch {
-            print("Error reading or parsing JSON:", error)
-        }
-    }
-}

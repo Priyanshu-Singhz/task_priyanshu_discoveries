@@ -1,82 +1,88 @@
 [
-  {
-    "date": "2024-03-08",
-    "items": [
-      {
-        "title": "Clarrk BEcker",
-        "type": "Hotels",
-        "location": "A 1",
-        "imageName": "Picture"
-      },
-      {
-        "title": "Edith Bogan",
-        "type": "Monument",
-        "location": "A 2",
-        "imageName": "Picture1"
-      }
-    ]
-  },
-  {
-    "date": "2024-03-09",
-    "items": [
-      {
-        "title": "Michael Collier",
-        "type": "Restaurant",
-        "location": "A 3",
-        "imageName": "Picture2"
-      },
-      {
-        "title": "Michael Collier",
-        "type": "Restaurant",
-        "location": "A 3",
-        "imageName": "Picture3"
-      },
-      {
-        "title": "Michael Collier",
-        "type": "Restaurant",
-        "location": "A 3",
-        "imageName": "Picture4"
-      }
-    ]
-  },
-  {
-    "date": "2024-03-08",
-    "items": [
-      {
-        "title": "Clarrk BEcker",
-        "type": "Hotels",
-        "location": "A 1",
-        "imageName": "Picture"
-      },
-      {
-        "title": "Edith Bogan",
-        "type": "Monument",
-        "location": "A 2",
-        "imageName": "Picture1"
-      }
-    ]
-  },
-  {
-    "date": "2024-03-09",
-    "items": [
-      {
-        "title": "Michael Collier",
-        "type": "Restaurant",
-        "location": "A 3",
-        "imageName": "Picture2"
-      },
-      {
-        "title": "Michael Collier",
-        "type": "Restaurant",
-        "location": "A 3",
-        "imageName": "Picture3"
-      },
-      {
-        "title": "Michael Collier",
-        "type": "Restaurant",
-        "location": "A 3",
-        "imageName": "Picture4"
-      }
-    ]
-  }
+    {
+        "date": "Tuesday, 2024.03.08",
+        "items": [
+            {
+                "title": "Clarrk BEcker",
+                "type": "Hotels",
+                "location": "A 1",
+                "imageName": "Picture"
+            },
+            {
+                "title": "Edith Bogan",
+                "type": "Monument",
+                "location": "A 2",
+                "imageName": "Picture1"
+            }
+        ]
+    },
+    {
+        "date": "Wednesday, 2024.03.09",
+        "items": [
+            {
+                "title": "Michael Collier",
+                "type": "Restaurant",
+                "location": "A 3",
+                "imageName": "Picture2"
+            },
+            {
+                "title": "John Doe",
+                "type": "Bar",
+                "location": "A 3",
+                "imageName": "Picture3"
+            },
+            {
+                "title": "Jane Smith",
+                "type": "Cafe",
+                "location": "A 3",
+                "imageName": "Picture4"
+            }
+        ]
+    },
+    {
+        "date": "Tuesday, 2024.03.08",
+        "items": [
+            {
+              "title": "Alice Johnson",
+              "type": "Museum",
+              "location": "A 3",
+              "imageName": "Picture2"
+            },
+            {
+              "title": "Bob Williams",
+              "type": "Gallery",
+              "location": "A 3",
+              "imageName": "Picture3"
+            },
+            {
+              "title": "Eve Brown",
+              "type": "Theater",
+              "location": "A 3",
+              "imageName": "Picture4"
+            }
+          ]
+    },
+    {
+        "date": "Wednesday, 2024.03.09",
+        "items": [
+            {
+                "title": "Peter Parker",
+                "type": "Park",
+                "location": "A 3",
+                "imageName": "Picture2"
+            },
+            {
+                "title": "Mary Jane",
+                "type": "Beach",
+                "location": "A 3",
+                "imageName": "Picture3"
+            },
+            {
+                "title": "Tony Stark",
+                "type": "Club",
+                "location": "A 3",
+                "imageName": "Picture4"
+            }
+        ]
+    }
 ]
