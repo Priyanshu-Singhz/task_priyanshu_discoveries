@@ -28,9 +28,6 @@ class CustomCellTableViewCell: UITableViewCell {
         super.layoutSubviews()
         backgroundColor = UIColor.clear
         mainStackView.layer.cornerRadius = 10
-        mainStackView.clipsToBounds = true
         routeButtonStack.layer.cornerRadius = 20
-        routeButtonStack.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        routeButtonStack.isLayoutMarginsRelativeArrangement = true
     }
 }

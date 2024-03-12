@@ -26,7 +26,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="819" height="180"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BzP-ss-LCf">
+                    <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BzP-ss-LCf">
                         <rect key="frame" x="10" y="10" width="799" height="174"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0N-lA-lNK">
@@ -99,10 +99,10 @@
                                                         <rect key="frame" x="350" y="0.0" width="350" height="40"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="RouteIcon" translatesAutoresizingMaskIntoConstraints="NO" id="mgE-qk-Pb1">
-                                                                <rect key="frame" x="5" y="0.0" width="295.33333333333331" height="40"/>
+                                                                <rect key="frame" x="5" y="10" width="285.33333333333331" height="20"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUI-Kr-MEB">
-                                                                <rect key="frame" x="305.33333333333337" y="0.0" width="44.666666666666686" height="40"/>
+                                                                <rect key="frame" x="295.33333333333337" y="10" width="44.666666666666686" height="20"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" name="CustomCell"/>
                                                                 <nil key="highlightedColor"/>
@@ -114,6 +114,7 @@
                                                             <constraint firstItem="mgE-qk-Pb1" firstAttribute="leading" secondItem="M30-g4-47J" secondAttribute="leading" constant="5" id="dQM-5U-MBg"/>
                                                             <constraint firstItem="mgE-qk-Pb1" firstAttribute="centerY" secondItem="M30-g4-47J" secondAttribute="centerY" id="vNo-gq-h1G"/>
                                                         </constraints>
+                                                        <edgeInsets key="layoutMargins" top="10" left="10" bottom="10" right="10"/>
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
