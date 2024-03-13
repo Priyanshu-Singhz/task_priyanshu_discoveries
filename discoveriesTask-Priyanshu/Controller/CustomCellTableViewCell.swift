@@ -28,6 +28,6 @@ class CustomCellTableViewCell: UITableViewCell {
         super.layoutSubviews()
         backgroundColor = UIColor.clear
         mainStackView.layer.cornerRadius = 10
-        routeButtonStack.layer.cornerRadius = 20
+        routeButtonStack.layer.cornerRadius = 17
     }
 }
