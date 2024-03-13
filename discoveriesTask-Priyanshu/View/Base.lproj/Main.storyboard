@@ -69,10 +69,10 @@
                                         <rect key="frame" x="0.0" y="110" width="430" height="788"/>
                                         <subviews>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xN6-iS-DVj">
-                                                <rect key="frame" x="20" y="0.0" width="390" height="788"/>
+                                                <rect key="frame" x="5" y="0.0" width="420" height="788"/>
                                                 <subviews>
                                                     <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="kVk-Fh-gEU">
-                                                        <rect key="frame" x="243" y="13" width="139" height="45"/>
+                                                        <rect key="frame" x="273" y="13" width="139" height="45"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Panaroma" translatesAutoresizingMaskIntoConstraints="NO" id="eU9-n6-qKW">
                                                                 <rect key="frame" x="16" y="10" width="16" height="25"/>
@@ -106,7 +106,7 @@
                                                         <edgeInsets key="layoutMargins" top="10" left="16" bottom="10" right="16"/>
                                                     </stackView>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Abc-iI-j23">
-                                                        <rect key="frame" x="8" y="68" width="374" height="702"/>
+                                                        <rect key="frame" x="8" y="68" width="404" height="702"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </tableView>
                                                 </subviews>
@@ -266,8 +266,8 @@
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="xN6-iS-DVj" secondAttribute="bottom" id="WBh-96-k9I"/>
                                             <constraint firstItem="xN6-iS-DVj" firstAttribute="top" secondItem="sL0-yg-djk" secondAttribute="top" id="e2Z-d9-9n9"/>
-                                            <constraint firstItem="xN6-iS-DVj" firstAttribute="leading" secondItem="sL0-yg-djk" secondAttribute="leading" constant="20" id="ftb-09-QMG"/>
-                                            <constraint firstAttribute="trailing" secondItem="xN6-iS-DVj" secondAttribute="trailing" constant="20" id="jQ4-H1-fji"/>
+                                            <constraint firstItem="xN6-iS-DVj" firstAttribute="leading" secondItem="sL0-yg-djk" secondAttribute="leading" constant="5" id="ftb-09-QMG"/>
+                                            <constraint firstAttribute="trailing" secondItem="xN6-iS-DVj" secondAttribute="trailing" constant="5" id="jQ4-H1-fji"/>
                                             <constraint firstItem="xN6-iS-DVj" firstAttribute="top" secondItem="sL0-yg-djk" secondAttribute="top" id="uTx-RF-San"/>
                                         </constraints>
                                     </view>
