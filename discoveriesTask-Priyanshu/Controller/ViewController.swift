@@ -98,10 +98,15 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 30))
-        let titleLabel = UILabel(frame: CGRect(x: 16, y: 10, width: tableView.frame.width, height: 15))
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
-        titleLabel.textColor = .buttonColorGrey
+        
+        let titleLabel = UILabel(frame: CGRect(x: 16, y: 20, width: tableView.frame.width, height: 15))
+        let metropolisFont = UIFont(name: "Metropolis-Regular", size: 13)
+        titleLabel.font = metropolisFont
+        
+        
+        titleLabel.textColor = .sectionButton
         titleLabel.text = items[section].date
+        
         headerView.addSubview(titleLabel)
         return headerView
     }
